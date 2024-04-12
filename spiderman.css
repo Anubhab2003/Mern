@@ -1,0 +1,14 @@
+p,a{
+    color: green;
+}
+.sp{
+    color:rgb(255, 240, 247);
+    font-weight: bold;
+}
+h2.cp{
+    color:rgb(240, 21, 21)
+}
+a:hover{
+    color:blueviolet;
+    text-shadow: 0cqmin;
+}
