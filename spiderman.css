@@ -1,14 +1,13 @@
-p,a{
-    color: green;
-}
-.sp{
-    color:rgb(255, 240, 247);
-    font-weight: bold;
-}
-h2.cp{
-    color:rgb(240, 21, 21)
-}
-a:hover{
-    color:blueviolet;
-    text-shadow: 0cqmin;
+*{
+    color: greenyellow;
+    background-color: rgb(77, 4, 43);
+    background-image: url("img.jpg");
+    /* height:1000px;
+    width:1000px; */
+    background-repeat:no-repeat;
+    /* background-size: 100px; */
+    background-attachment: scroll;
+    background-size:100px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
