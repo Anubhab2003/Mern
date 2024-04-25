@@ -4,51 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Form</title>
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
-    <form action="http://localhost:3000/submit-form" method="POST"> <!-- Added action and method attributes -->
-        <h1>Payment form</h1>
-        <p>Required fields are followed by *</p>
-        <h2>Contact Information</h2>
-        <p>Name:* <input type="text" name="name" required></p>
-        <fieldset>
-            <legend>Sex*</legend>
+    <div class="container">
+        <form action="http://localhost:3000/submit-form" method="POST"> <!-- Added action and method attributes -->
+            <h1 class="Main_heading">Payment form</h1>
+            <p>Required fields are followed by *</p>
+            <h2>Contact Information</h2>
+            <p>Name:* <input type="text" name="name" placeholder="Anubhab Chowdhury"></p>
+            <fieldset>
+                <legend>Sex*</legend>
+                <p>
+                
+                    Male <input type="radio" name="gender"id="male">
+                    Female <input type="radio" name="gender"id="female">
+                </p>
+    
+            </fieldset>
             <p>
-            
-                Male <input type="radio" name="gender"id="male">
-                Female <input type="radio" name="gender"id="female">
+                Address: <textarea name="address" if="address" cols="100"rows="7"></textarea>
             </p>
+            <p>Email*: <input type="email" name="email" id="email"></p>
+            <p>Pincode*:<input type="number"name="pinnumber"></p>
+            <hr>
+            <h2>
+                Payment Information
+            </h2>
+            <p>Card Type*:
+                <select name="card_type" id="card_type">
+                    <option value="">Select a Card Type</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Master Card</option>
+                    <option value="Rupay">Rupay</option>
+                </select>
+            </p>
+            <p>
+                Card Number* <input type="number" name="cardnumber" id="cardnumber">
+            </p>
+            <p>
+                Expiration Date*: <input type="date" name="card_exp_date"id="card_exp_date">
+            </p>
+            <p>
+                CVV*: <input type="password"name="cvv"id="cvv">
+            </p>
+            <input type="submit"value="Pay Now">
+            
+        </form>
 
-        </fieldset>
-        <p>
-            Address: <textarea name="address" if="address" cols="100"rows="7"></textarea>
-        </p>
-        <p>Email*: <input type="email" name="email" id="email"></p>
-        <p>Pincode*:<input type="number"name="pinnumber"></p>
-        <hr>
-        <h2>
-            Payment Information
-        </h2>
-        <p>Card Type*:
-            <select name="card_type" id="card_type">
-                <option value="">Select a Card Type</option>
-                <option value="visa">Visa</option>
-                <option value="mastercard">Master Card</option>
-                <option value="Rupay">Rupay</option>
-            </select>
-        </p>
-        <p>
-            Card Number* <input type="number" name="cardnumber" id="cardnumber">
-        </p>
-        <p>
-            Expiration Date*: <input type="date" name="card_exp_date"id="card_exp_date">
-        </p>
-        <p>
-            CVV*: <input type="password"name="cvv"id="cvv">
-        </p>
-        <input type="submit"value="Pay Now">
-        
-    </form>
+    </div>
+    
     
 </body>
 </html>
