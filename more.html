@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS selector</title>
+    <style>
+        .box:first-child{
+            background-color: blue;
+        }
+        .boxes *{
+            color: red;
+            border: 2px solid black;
+        }
+        .boxes::before{
+            content: "Anubhab is good";
+            color:pink;
+        }
+        .boxes::after{
+            content: "Anubhab is good";
+            color:aqua;
+        }
+        .boxes::selection{
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">I am a Box</div>
+        <div class="box">I am a Box</div>
+        <div class="box">I am a Box</div>
+    </div>
+</body>
+</html>
