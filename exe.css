@@ -1,0 +1,66 @@
+nav{
+    background-color: aquamarine;
+    list-style: none;
+    padding: 12px 0;
+    position:sticky;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    font-weight: bolder;
+}
+.jersey-25-regular {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+span.cricket {
+    width: 500px;
+    border: 7px solid black;
+    padding: 40px;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position:fixed; /* Fixed position */
+    right: 0;       /* Align to the right */
+    bottom: 0;      /* Align to the bottom */
+    overflow: visible;
+}
+footer{
+    background-color: aquamarine;
+    list-style: none;
+    padding: 12px 0;
+    
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+footer a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 120;
+}
+a.foot{
+    text-align: center;
+}
