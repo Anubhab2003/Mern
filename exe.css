@@ -40,7 +40,7 @@ span.cricket {
     position:fixed; /* Fixed position */
     right: 0;       /* Align to the right */
     bottom: 0;      /* Align to the bottom */
-    overflow: visible;
+    
 }
 footer{
     background-color: aquamarine;
