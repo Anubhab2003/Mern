@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container{
+            background-color: aqua;
+            height:80vh;
+            width:30vw;
+        }
+        .box{
+            width:27vh;
+            height:5vw;
+            background-color: bisque;
+            animation-name: anubhab;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-direction: alternate;
+        }
+        @keyframes anubhab{
+            from{
+                background-color: pink;
+            }
+            to{
+                background-color: purple;
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            ANUBHAB
+        </div>
+    </div>
+</body>
+</html>
