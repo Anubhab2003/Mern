@@ -1,0 +1,173 @@
+.layout-child {
+    height: 152px;
+    width: 1728px;
+    position: relative;
+    background-color: #0a0909;
+    display: none;
+    max-width: 100%;
+  }
+  .graphic-icon,
+  .jim-jam {
+    position: relative;
+    z-index: 1;
+  }
+  .jim-jam {
+    white-space: nowrap;
+  }
+  .graphic-icon {
+    height: 66.2px;
+    width: 165.4px;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 41px;
+    max-width: 100%;
+  }
+  .home {
+    text-decoration: none;
+    align-self: stretch;
+    position: relative;
+    color: inherit;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .home-wrapper {
+    width: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 6px 0 0;
+    box-sizing: border-box;
+  }
+  .about-us {
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+    font-size: 35.9px;
+  }
+  .privacy-policy {
+    position: relative;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .privacy-policy-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+    font-size: 32.9px;
+  }
+  .layout,
+  .links,
+  .navigation,
+  .privacy-policy-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  .links {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 52px;
+  }
+  .layout,
+  .navigation {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .navigation {
+    width: 578px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 14.4px 0 0;
+    font-size: 35.8px;
+  }
+  .layout {
+    align-self: stretch;
+    background-color: #0a0909;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 31.6px 92px 43.4px 65px;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    gap: 20px;
+    text-align: left;
+    font-size: 63.8px;
+    color: #fff;
+    font-family: Inter;
+  }
+  .shape-child {
+    height: 424.9px;
+    flex: 1;
+    position: relative;
+    border-radius: 50%;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .macbook-pro-16-1,
+  .shape {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .shape {
+    width: 543px;
+    flex-direction: row;
+    padding: 0 32px;
+    max-width: 100%;
+  }
+  .macbook-pro-16-1 {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 523.1px;
+    gap: 17px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1025px) {
+    .home {
+      display: none;
+    }
+    .home-wrapper {
+      width: 6px;
+    }
+  }
+  @media screen and (max-width: 975px) {
+    .layout {
+      padding-left: 32px;
+      padding-right: 46px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    .links {
+      gap: 26px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .content {
+      gap: 20px;
+    }
+    .layout {
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
