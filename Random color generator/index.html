@@ -9,9 +9,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 23px;
+            gap: 2px;
             flex-direction: row;
-            height: 100vh;
+            /* height: 1vh; */
+            
+            
+            
         }
         .box{
             display: flex;
@@ -22,18 +25,29 @@
             align-items: center;
             border: 2px solid black;
             box-sizing: border-box; /* Add this line */
+            
+           
         }
 
     </style>
 </head>
 <body>
+    
     <div class="container">
         <div class="box">Box</div>
         <div class="box">Box</div>
         <div class="box">Box</div>
+    </div> 
+    <div class="container">
         <div class="box">Box</div>
         <div class="box">Box</div>
-    </div>   
+        <div class="box">Box</div>
+    </div>  
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>    
     <script>
         let colors = ["yellow", "red", "green", "blue"];
         var boxes = document.getElementsByClassName("box");
