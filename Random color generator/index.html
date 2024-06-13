@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .box{
+            display: flex;
+            height: 34px;
+            width: 34px;
+            padding: 34px;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            box-sizing: border-box; /* Add this line */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>   
+    <script>
+        let colors = ["yellow", "red", "green", "blue"];
+        var boxes = document.getElementsByClassName("box");
+        for (var i = 0; i < boxes.length; i++) {
+            var randomIndex = Math.floor(Math.random() * colors.length); // Generate a random index
+            boxes[i].style.backgroundColor = colors[randomIndex]; // Use the random index to set a random color
+        }
+        setTimeout(function() {
+            window.location.reload();
+        }, 1000); // 3000 milliseconds = 3 seconds
+
+
+
+    </script>
+</body>
+</html>

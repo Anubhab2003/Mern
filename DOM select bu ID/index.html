@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 34px;
+            width:34px;
+            margin:34px;
+            padding: 34px;
+            border:2px solid pink;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Anubhab</div>
+        <div class="box">Bruce wayne</div>
+        <div id="magic" class="box">Dr Strange</div>
+        <div class="box">Bruce Banner</div>
+        <div class="box">Tony Stark</div>
+        <div class="box">Peter Parker</div>
+        
+    </div>
+    <script>
+        console.log("Hero")
+        let ironman=document.getElementsByClassName("box")
+        console.log(ironman)
+        ironman[3].style.backgroundColor="red"
+        document.getElementById("magic").style.backgroundColor="yellow"
+        document.querySelector(".box").style.backgroundColor="green"//will select the first box
+        document.querySelectorAll(".box").forEach(e=>{e.style.backgroundColor="pink"})
+
+    </script>
+</body>
+</html>
