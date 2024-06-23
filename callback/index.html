@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback and Promise</title>
+</head>
+<body>
+    <script>
+        //CALLBACKS  https://www.geeksforgeeks.org/javascript-callbacks/
+        // console.log("Harry is a hacker")
+        // console.log("Rohan is a hecker")
+
+
+        // setTimeout(() => {
+        //     console.log("I am inside settimeout")
+        // }, 0);
+
+        // setTimeout(() => {
+        //     console.log("I am inside settimeout 2")
+        // }, 0);
+
+        // console.log("The End")
+
+        // const fn = () => {
+        // console.log("Nothing")
+        // }
+
+        // const callback = (arg, fn) => {
+        //     console.log(arg)
+        //     fn()
+        // }
+
+        // const loadScript = (src, callback) => {
+        //     let sc = document.createElement("script");
+        //     sc.src = src;
+        //     sc.onload = callback("Harry", fn);
+        //     document.head.append(sc)
+        // }
+
+
+        // loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback )
+
+
+
+        // promises in javascript https://www.geeksforgeeks.org/javascript-promise/
+        let prom1=new Promise((resolve,reject)=>{
+            let a=Math.random();
+            if(a<0.5){
+                reject("no random number is supporting the code")
+                
+            }
+            else{
+                setTimeout(() => {
+                console.log("Yes I am done")
+                resolve("Anubhab")
+            }, 3000);
+            }
+            
+        })
+        prom1.then((a)=>{
+            console.log(a)
+        }).catch((err)=>{
+            alert("Site is under maintainance")
+        })
+        
+        
+    </script>
+</body>
+</html>
