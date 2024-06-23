@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click event</title>
+</head>
+<body>
+    <button id="alert">Alert</button>
+    <script>
+        let btn=document.getElementById("alert");
+        btn.addEventListener("click",()=>{
+            alert("You are clicked")
+        })
+        document.addEventListener("keydown",()=>{
+            alert("don't touch your keyboard")
+        })
+    </script>
+</body>
+</html>

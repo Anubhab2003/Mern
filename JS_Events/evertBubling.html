@@ -1,0 +1,63 @@
+<!-- There is my code for Event Bubbling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            padding:40px;
+            background-color: aqua;
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .container{
+            padding: 50px;
+            background-color: yellow;
+            cursor: pointer;
+            border: 4px solid pink;
+            border-radius: 20px;
+        }
+        .childContainer{
+            padding: 15px;
+            background-color: yellowgreen;
+            cursor: pointer;
+            border: 5px solid green;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a Child
+            </div>
+        <section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click",(e)=>{
+            e.stopPropagation()
+            alert("Don't touch my child")
+        })
+        document.querySelector(".childContainer").addEventListener("click",(e)=>{
+            e.stopPropagation()
+            alert("Don't touch my childContainer")
+        })
+        document.querySelector(".container").addEventListener("click",(e)=>{
+            e.stopPropagation()
+            alert("Don't touch my container")
+        })
+        
+
+
+
+        setInterval(()=>{
+            document.querySelector(".child").style.background=blur
+        },3000);
+    </script>
+</body>
+</html>
