@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Button</title>
+</head>
+<body>
+    <button onclick="showNotification()">Click me!</button>
+
+    <script>
+        function showNotification() {
+            if ('Notification' in window) {
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === 'granted') {
+                        new Notification('Hello!', {
+                            body: 'This is Notification',
+                            icon: 'meme-icon.png' // Replace with your own icon path
+                        });
+                    } else {
+                        console.log('Notification permission denied.');
+                    }
+                });
+            } else {
+                console.log('Notifications not supported in this browser.');
+            }
+        }
+    </script>
+</body>
+</html>
