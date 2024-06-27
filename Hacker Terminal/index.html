@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <title>Hack your System</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: monospace;
+        }
+        .hacker div {
+            color: red;
+            font-size: 1.5em;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hacker">
+        <div class="L1">Welcome to the Hack...</div>
+        <div class="L2" style="display: none;">Initializing Hacking...</div>
+        <div class="L3" style="display: none;">Reading your Files...</div>
+        <div class="L4" style="display: none;">Password files Detected...</div>
+        <div class="L5" style="display: none;">Sending all passwords and personal files to server...</div>
+        <div class="L6" style="display: none;">Cleaning up...</div>
+    </div>
+    <script>
+        alert("ARE YOU SURE YOU WANNA PLAY THIS GAME")
+        alert("THERE IS NO GOING BACK")
+        alert("DEVICE HOLDER NAME DETECTED, IS IT JOYJEET")
+        document.addEventListener("DOMContentLoaded", function() {
+            const messages = document.querySelectorAll(".hacker div");
+            let currentMessage = 0;
+
+            function showNextMessage() {
+                if (currentMessage > 0) {
+                    messages[currentMessage - 1].style.display = "none";
+                }
+                if (currentMessage < messages.length) {
+                    messages[currentMessage].style.display = "block";
+                    currentMessage++;
+                }
+            }
+
+            // Show the first message immediately
+            showNextMessage();
+
+            // Set an interval to show each subsequent message
+            setInterval(showNextMessage, 4000);
+            alert("WE HAVE INJECTED A MALICIOUS FILE IN YOUR SYSTEM")
+        });
+    </script>
+</body>
+</html>
