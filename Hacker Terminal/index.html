@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hack your System</title>
     <style>
         body {
@@ -11,13 +11,29 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            padding: 0;
             color: white;
             font-family: monospace;
+            text-align: center; /* Center text horizontally */
         }
         .hacker div {
             color: red;
             font-size: 1.5em;
             margin: 5px 0;
+        }
+
+        /* Responsive design: Adjust font-size for smaller screens */
+        @media (max-width: 768px) {
+            .hacker div {
+                font-size: 1.2em; /* Slightly smaller font for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hacker div {
+                font-size: 1em; /* Smaller font for phones */
+            }
         }
     </style>
 </head>
@@ -31,9 +47,10 @@
         <div class="L6" style="display: none;">Cleaning up...</div>
     </div>
     <script>
-        alert("ARE YOU SURE YOU WANNA PLAY THIS GAME")
-        alert("THERE IS NO GOING BACK")
-        alert("DEVICE HOLDER NAME DETECTED, IS IT JOYJEET")
+        alert("ARE YOU SURE YOU WANNA PLAY THIS GAME");
+        alert("THERE IS NO GOING BACK");
+        alert("DEVICE HOLDER NAME DETECTED, IS IT JOYJEET");
+
         document.addEventListener("DOMContentLoaded", function() {
             const messages = document.querySelectorAll(".hacker div");
             let currentMessage = 0;
@@ -53,7 +70,7 @@
 
             // Set an interval to show each subsequent message
             setInterval(showNextMessage, 4000);
-            alert("WE HAVE INJECTED A MALICIOUS FILE IN YOUR SYSTEM")
+            alert("WE HAVE INJECTED A MALICIOUS FILE IN YOUR SYSTEM");
         });
     </script>
 </body>
