@@ -3,76 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hack your System</title>
+    <title>Hack</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         body {
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: monospace;
-            text-align: center; /* Center text horizontally */
-        }
-        .hacker div {
             color: red;
-            font-size: 1.5em;
-            margin: 5px 0;
-            font-weight: bolder;
-        }
-
-        /* Responsive design: Adjust font-size for smaller screens */
-        @media (max-width: 768px) {
-            .hacker div {
-                font-size: 1.2em; /* Slightly smaller font for tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hacker div {
-                font-size: 1em; /* Smaller font for phones */
-            }
+            font-size: 30px;
+            font-family: "Cedarville Cursive", cursive;
         }
     </style>
 </head>
 <body>
-    <div class="hacker">
-        <div class="L1">Welcome to the Hack...</div>
-        <div class="L2" style="display: none;">Initializing Hacking...</div>
-        <div class="L3" style="display: none;">Reading your Files...</div>
-        <div class="L4" style="display: none;">Password files Detected...</div>
-        <div class="L5" style="display: none;">Sending all passwords and personal files to server...</div>
-        <div class="L6" style="display: none;">Cleaning up...</div>
-    </div>
+    
     <script>
-        alert("ARE YOU SURE YOU WANNA PLAY THIS GAME");
-        alert("THERE IS NO GOING BACK");
-        alert("DEVICE HOLDER NAME DETECTED, IS IT JOYJEET");
+        const addItem = async (item) => {
+            await randomDelay();
+            let div = document.createElement("div");
+            div.innerHTML = item;
+            document.body.append(div);
+        };
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const messages = document.querySelectorAll(".hacker div");
-            let currentMessage = 0;
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                const timeout = 1 + 6 * Math.random();
+                setTimeout(() => {
+                    resolve();
+                }, timeout * 1000);
+            });
+        };
 
-            function showNextMessage() {
-                if (currentMessage > 0) {
-                    messages[currentMessage - 1].style.display = "none";
+
+
+        async function main(){
+            setInterval(()=>{
+                let last=document.body.lastElementChild;
+                if(last.innerHTML.endsWith("...")){
+                    last.innerHTML=last.innerHTML.slice(0,last.innerHTML.length-3);
+                }else{
+                    last.innerHTML=last.innerHTML+"."
                 }
-                if (currentMessage < messages.length) {
-                    messages[currentMessage].style.display = "block";
-                    currentMessage++;
-                }
+                
+            },100);
+
+            const text = [
+                "Initializing Hacking",
+                "Reading your Files",
+                "Sending passwords to server",
+                "Cleaning up",
+            ];
+
+            for (const item of text) {
+                await addItem(item);
             }
+        }
+        main();
 
-            // Show the first message immediately
-            showNextMessage();
-
-            // Set an interval to show each subsequent message
-            setInterval(showNextMessage, 4000);
-            alert("WE HAVE INJECTED A MALICIOUS FILE IN YOUR SYSTEM");
-        });
+        
     </script>
+    
 </body>
 </html>
