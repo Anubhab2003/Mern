@@ -6,6 +6,22 @@ export default function TextForm(props) {
     let newText=text.toUpperCase();
     setText(newText);
   };
+ 
+  const DownloadText = () => {
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'myFile.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  const handleClearClick = () => {
+    // console.log("Uppercase was clicked"+text);
+    let newText=" "
+    setText(newText);
+  };
   const handleLoClick = () => {
     // console.log("Uppercase was clicked"+text);
     let newText=text.toLowerCase();
@@ -38,6 +54,12 @@ export default function TextForm(props) {
       </button>
       <button className="btn btn-primary mx-3" onClick={handleLoClick}>
         Convert to Lowercase
+      </button>
+      <button className="btn btn-primary mx-2" onClick={handleClearClick}>
+        Clear Text
+      </button>
+      <button className="btn btn-primary mx-2" onClick={DownloadText}>
+        Download Text
       </button>
     </div>
     <div className="container my-3">
