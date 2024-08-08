@@ -38,7 +38,7 @@ export default function TextForm(props) {
 
   return (
     <>
-    <div className="container">
+    <div className="container" style={{color:props.mode==='dark'?'white':'#042743'}}>
       <h1>{props.heading}</h1>
       <div className="mb-3">
         <textarea
@@ -47,6 +47,8 @@ export default function TextForm(props) {
           rows="8"
           value={text}
           onChange={handleOnChange}
+
+          style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'#042743'}}
         ></textarea>
       </div>
       <button className="btn btn-primary" onClick={handleUpClick}>
@@ -62,13 +64,13 @@ export default function TextForm(props) {
         Download Text
       </button>
     </div>
-    <div className="container my-3">
+    <div className="container my-3" style={{color:props.mode==='dark'?'white':'#042743'}}>
       <h2>Your Text Summary</h2>
       <p>{text.split(" ").length} Words and {text.length} characters</p>
       
       <p>{0.008 * text.split(" ").length} Minutes read </p>
       <h2>Preview</h2>
-      <p>{text}</p>
+      <p>{text.length>0?text:"Enter Text in Text Box To Preview"}</p>
 
     </div>
     </>
