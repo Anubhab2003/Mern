@@ -5,6 +5,7 @@ export default function TextForm(props) {
     // console.log("Uppercase was clicked"+text);
     let newText=text.toUpperCase();
     setText(newText);
+    props.setAlert("Converted to uppercase","success");
   };
  
   const DownloadText = () => {
@@ -16,16 +17,20 @@ export default function TextForm(props) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    props.setAlert("Text Downloaded Succesfully Bro","success");
+
   };
   const handleClearClick = () => {
     // console.log("Uppercase was clicked"+text);
     let newText=" "
     setText(newText);
+    props.setAlert("Text Cleared","success");
   };
   const handleLoClick = () => {
     // console.log("Uppercase was clicked"+text);
     let newText=text.toLowerCase();
     setText(newText);
+    props.setAlert("Converted to Lowercase","success");
   };
 
   const handleOnChange = (event) => {
