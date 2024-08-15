@@ -3,6 +3,21 @@ import PropTypes from 'prop-types'
 
 
 export default function Navbar(props) {
+  const Yellow=()=>{
+    
+    document.body.style.backgroundColor= '#ff9900';
+
+  }
+  const Red=()=>{
+    
+    document.body.style.backgroundColor= 'Red';
+
+  }
+  const Green=()=>{
+    
+    document.body.style.backgroundColor= 'Green';
+
+  }
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
@@ -37,6 +52,13 @@ export default function Navbar(props) {
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form> */}
+
+          <button type="button" className="btn btn-warning mx-2 border-black rounded-full" onClick={Yellow}>Yellow Theme</button>
+          <button type="button" class="btn btn-danger mx-2 border-black rounded-full" onClick={Red}>Red Theme</button>
+          <button type="button" class="btn btn-success mx-2 border-black rounded-full" onClick={Green}>Green Theme</button>
+
+
+
           <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
           <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
           <label className="form-check-label " for="flexSwitchCheckDefault"> Enable DarkMode</label>

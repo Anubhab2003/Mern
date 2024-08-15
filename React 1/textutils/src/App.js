@@ -7,7 +7,7 @@ import { useState } from "react";
 import Alert from "./Components/Alert";
 let name = "Anubhab";
 function App() {
-  const [mode, setMode] = useState('light');//wheather dark mode is enable or not
+  const [mode, setMode] = useState('light');//whether dark mode is enable or not
 
 
   const [alert, setalert]=useState(null);
@@ -19,7 +19,7 @@ function App() {
     setTimeout(() => {
       setalert(null);
     }
-    ,3000);    
+    ,1500);    
   }
   const toggleMode=()=>{
     if(mode==='light'){
